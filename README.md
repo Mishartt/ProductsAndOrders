@@ -15,9 +15,13 @@ View detailed information for each order
 
 
 🚀 Technologies
+
 Frontend: Next.js (with SSR), Redux, TypeScript, SCSS
+
 Backend: Node.js, Express
+
 Real-time: Socket.io
+
 Infrastructure: Docker (containerization of both frontend and backend)
 
 Although I didn’t have time to implement JWT authentication, unit tests, and internationalization (i18n), I’ve worked with them before and can easily add these features if necessary.
@@ -28,7 +32,7 @@ Although I didn’t have time to implement JWT authentication, unit tests, and i
 🧪 Run Locally via Docker:
 
 Clone the repository:
-git clone https://github.com/yourname/products-and-orders.git
+git clone https://github.com/Mishartt/ProductsAndOrders.git
 cd ProductsAndOrders
 
 Run the project:
