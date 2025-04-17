@@ -1,0 +1,20 @@
+services:
+  frontend:
+    build:
+      context: ./client/pq
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: .
+      dockerfile: server/Dockerfile
+    ports:
+      - "5500:5500"
+    volumes:
+      - ./server:/server
+    environment:
+      - NODE_ENV=production

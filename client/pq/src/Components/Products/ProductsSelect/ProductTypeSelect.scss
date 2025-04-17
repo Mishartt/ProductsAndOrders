@@ -1,0 +1,20 @@
+@use '../../../../styles//colors' as *;
+
+.products-select{
+    display: flex;
+    align-items: center;
+
+    select{
+        width: 250px;
+        background-color: white;
+        color: $font-dark;
+        border-radius: 4px;
+        border: 1px solid #d5dde0;
+        padding: 7px 12px;
+        font-weight: 600;
+
+        &:focus{
+            outline: none;
+        }
+    }
+}

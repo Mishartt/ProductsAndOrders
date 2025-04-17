@@ -1,0 +1,36 @@
+@use './../../../styles/_colors.scss' as *;
+
+.header-search-wrapper{
+    width: 300px;
+    color: $font-dark;
+    position: relative;
+    margin-right: 80px;;
+
+
+    .header-search__input{
+        width: 100%;
+        background: #f0f3f5;
+        padding: 8px 16px;
+        border-radius: 4px;
+        border: 1px solid #d5dde0;
+        color: $font-dark;
+    }
+
+
+    .header-search-list{
+        width: 100%;
+        margin-top: 8px;
+        position: absolute;
+        border-radius: 8px;
+        overflow: hidden;
+        border: 1px solid #d5dde0;
+        border-top: none;
+
+
+        &__item{
+            padding: 8px 8px;
+            background: white;
+            border-top: 1px solid #d5dde0;
+        }
+    }
+}

@@ -1,0 +1,226 @@
+@use './../../../../styles/_colors.scss' as *;
+
+
+#order-item_active{
+   .order-item__selected{
+
+   }
+}
+
+
+#order-item_compact{
+    justify-content: flex-start;
+
+
+    .order-item__name{
+        display: none;
+    }
+
+    .order-item__price{
+        display: none;
+    }
+}
+
+.order-item{
+    position: relative;
+    min-width: auto;
+    display: flex;
+    align-items: center;
+    padding: 14px 20px;
+    border: 2px solid #d5dde0;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    background: white;
+    color: $font-medium;
+    overflow: hidden;
+
+    justify-content: space-between;
+    gap: 50px;
+
+    .order-item__name{
+        width: 300px;
+        // flex: 1 1 auto;               
+        margin-right: 16px;          
+        white-space: nowrap;        
+        overflow: hidden;           
+        text-overflow: ellipsis;      
+    }
+
+    &__products{
+        display: flex   ;
+    }
+
+    &__more{
+        width: 38px;
+        height: 38px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        // border: 2px solid #5b6f77ce;
+        box-shadow: 0 0 1px 2px #5b6f77ce;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+
+    &__products-count{
+        font-size: 0.9em;
+        p{
+            color: $fondt-light;
+            font-weight: 400;
+        }
+        span{
+            font-weight: 600;
+            font-size: 1.25em;
+            color: $font-medium;
+        }
+    }
+
+    &__date{
+        text-align: center;
+    }
+
+
+    &__delete{
+        cursor: pointer;
+        img{
+            height: 18px;
+            width: 18px;
+        }
+    }
+
+
+    &__selected-icon{
+        position: absolute;
+        right: 0;
+        height: 100%;
+        width: 45px;
+        background-color: #cfd8dc;
+
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.3em;
+    }
+
+    &__price{
+        span{
+            font-size: 0.8em;
+        }
+    }
+}
+
+.delete-order-modal{
+    top: -80px;
+    right: 0;
+    bottom: 0;
+    left: 300px;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
+    &__container{
+        min-width: 700px;
+        min-height: 100px;
+        background: white;
+        border-radius: 5px;
+        position: relative;
+
+        animation: modal-apr 0.3s 1;
+        @keyframes modal-apr {
+            0%{
+                transform: translateY(8px);
+            }
+        }
+
+        &__close{
+            width: 35px;
+            height: 35px;
+            background: white;
+            border-radius: 50%;
+            position: absolute;
+            right: -15px;
+            top: -15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid rgb(197, 197, 197);
+            cursor: pointer;
+        }
+
+        &__text{
+            padding: 20px;
+        }
+
+        .delete-order-modal__container__products-product{
+            border-top: 1px solid rgb(230, 230, 230);
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+
+
+            img{
+                height: 35px;
+                margin-right: 20px;
+            }
+
+            &__availability{
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                margin-right: 20px;
+                margin-left: 10px;
+            }
+
+            #modal-poduct_available{
+                background-color: $primary-green;
+            }
+
+            #modal-poduct_unavailable{
+                background-color: $primary-green-yellow;
+            }
+
+
+            &__title{
+                font-size: 1.2em;
+                span{
+                    font-size: 0.85em;
+                    color: $fondt-light;
+                }
+            }
+
+
+            &-btns{
+                width: 100%;
+                height: 100px;
+                background-color: $primary-green;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+
+                &__cancel{
+                    margin-right: 20px;
+                    color: white;
+                    font-size: 1.2em;
+                    cursor: pointer;
+                }
+
+                &__delete{
+                    color: rgb(219, 44, 44);
+                    background: white;
+                    padding: 16px 38px;
+                    margin-right: 20px;
+                    border-radius: 18px;
+                    font-weight: 500;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

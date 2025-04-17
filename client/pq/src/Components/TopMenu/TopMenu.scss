@@ -1,0 +1,23 @@
+.top-menu{
+    display: flex;
+    align-items: flex-end;
+    font-weight: 500;
+    min-width: 250px;
+
+    .top-menu-date{
+        margin-right: 8px;
+    }
+
+    .top-menu__cuurDate{
+        margin-right: 12px;
+    }
+    
+    .top-menu__time{
+       margin-right: 8px;
+    }
+    
+    .top-menu__day{
+        margin-bottom: 10px;
+    }
+
+}

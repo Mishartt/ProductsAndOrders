@@ -1,0 +1,9 @@
+client/pq/node_modules/
+server/node_modules/
+
+
+# Next.js build
+client/.next/
+client/out/
+
+
