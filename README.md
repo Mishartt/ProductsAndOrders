@@ -2,7 +2,6 @@
 Products&Orders is a test application for managing orders and products. It is built using Next.js, Node.js, and TypeScript. Order data is stored on the server in a file using fs, as integrating a database for this test project was considered unnecessary (and wasn't mentioned in the requirements).
 
 📦 Features:
-
 View all orders and products
 
 Delete orders and products
@@ -10,6 +9,9 @@ Delete orders and products
 Search for products
 
 View detailed information for each order
+
+
+
 
 🚀 Technologies
 Frontend: Next.js (with SSR), Redux, TypeScript, SCSS
