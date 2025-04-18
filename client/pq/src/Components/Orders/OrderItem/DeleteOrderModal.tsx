@@ -23,13 +23,13 @@ const DeleteOrderModal: FC<DeleteOrderModalProps> = ({ orderId, setIsModalOpen, 
   return (
     <div className="delete-order-modal">
       <div className="delete-order-modal__container">
-        <button
+        <div
           onClick={() => setIsModalOpen(false)}
           className="delete-order-modal__container__close"
           aria-label="Close Modal"
         >
           X
-        </button>
+        </div>
 
         <div className="delete-order-modal__container__text">
           <h2>Вы уверены, что хотите удалить этот приход?</h2>
@@ -45,18 +45,18 @@ const DeleteOrderModal: FC<DeleteOrderModalProps> = ({ orderId, setIsModalOpen, 
         </div>
 
         <div className="delete-order-modal__container__products-product-btns">
-          <button
+          <div
             onClick={() => setIsModalOpen(false)}
             className="delete-order-modal__container__products-product-btns__cancel"
           >
             ОТМЕНИТЬ
-          </button>
-          <button
+          </div>
+          <div
             onClick={delOrder}
             className="delete-order-modal__container__products-product-btns__delete"
           >
             УДАЛИТЬ
-          </button>
+          </div>
         </div>
       </div>
     </div>

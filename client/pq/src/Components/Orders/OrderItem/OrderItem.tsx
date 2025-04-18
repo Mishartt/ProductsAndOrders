@@ -12,7 +12,7 @@ import DeleteOrderModal from "./DeleteOrderModal";
 
 const OrderItem: FC<{ order: Order }> = ({ order }) => {
   const dispatch = useAppDispatch();
-  const products:Product[] = useSelector((state: any) => state.products);
+  const products:Product[]|[] = useSelector((state: any) => state.products);
   const selectedOrder = useSelector((state: any) => state.orders.selectedOrder);
 
 
@@ -28,6 +28,10 @@ const OrderItem: FC<{ order: Order }> = ({ order }) => {
   const calcIncome= useMemo(() => {
     let usd = 0
     let uah = 0
+
+    if(!Array.isArray(products) || products.length < 1 ){
+      return {usd:null,uah:null}
+    }
 
     order.products.forEach(item => {
       const currProduct:Product|undefined = products.find(product => product.id == item)
