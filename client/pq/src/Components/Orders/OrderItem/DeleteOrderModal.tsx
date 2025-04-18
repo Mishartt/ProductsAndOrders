@@ -37,7 +37,7 @@ const DeleteOrderModal: FC<DeleteOrderModalProps> = ({ orderId, setIsModalOpen, 
 
         <div className="delete-order-modal__container__products">
           {productIds.map(productItemId => {
-            const product = products?.find(prod => prod.id === productItemId)
+            const product = products?.find(prod => prod.id == productItemId)
             return (
               <ProductItemForModal key={productItemId} product={product} />
             )
