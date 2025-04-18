@@ -14,7 +14,4 @@ services:
       dockerfile: server/Dockerfile
     ports:
       - "5500:5500"
-    volumes:
-      - ./server:/server
-    environment:
-      - NODE_ENV=production
+
